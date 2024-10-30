@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Historique</title>
+    <style>
+        /* Style de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style du fond et du conteneur */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('fond.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Conteneur de la question et du bouton */
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Couche semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        /* Style du bouton */
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Style de la réponse */
+        #answer {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #FFD700;
+        }
+
+        /* Responsive pour petits écrans */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quel était le nom de la ville de Millau dans l'Antiquité ?</h1>
+        <button onclick="showAnswer()">Afficher la réponse</button>
+        <div id="answer">Condatomagus</div>
+    </div>
+
+    <script>
+        // Fonction pour afficher la réponse
+        function showAnswer() {
+            const answer = document.getElementById('answer');
+            answer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
